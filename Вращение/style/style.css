@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.square {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    font-size: 1.5em;
+    text-align: center;
+    background: #f403d0;
+    animation: 4s linear infinite rotate;
+    transform-origin: left top;
+}
+
+.pivont-point {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #272424;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* если отрицательное число rotate(-360deg), тогда будет вращаться против часовой */
